@@ -94,21 +94,21 @@ function App() {
         <span style={{ margin: "0 1rem" }}>:</span>
         <label style={{ width: 180 }}>
           Change BasePDF
-          <input type="file" accept="application/pdf" onChange={onChangeBasePDF} />
+          <input id="ChangePDF" type="file" accept="application/pdf" onChange={onChangeBasePDF} />
         </label>
         <span style={{ margin: "0 1rem" }}>/</span>
         <label style={{ width: 180 }}>
           Load Template
-          <input type="file" accept="application/json" onChange={(e) => handleLoadTemplate(e, designer.current)} />
+          <input id="LoadTemplate" type="file" accept="application/json" onChange={(e) => handleLoadTemplate(e, designer.current)} />
         </label>
         <span style={{ margin: "0 1rem" }}>/</span>
-        <button onClick={onDownloadTemplate}>Download Template</button>
+        <button id="DownloadTemplate" onClick={onDownloadTemplate}>Download Template</button>
         <span style={{ margin: "0 1rem" }}>/</span>
-        <button onClick={() => onSaveTemplate()}>Save Template</button>
+        <button id="SaveTemplate" onClick={() => onSaveTemplate()}>Save Template</button>
         <span style={{ margin: "0 1rem" }}>/</span>
-        <button onClick={onResetTemplate}>Reset Template</button>
+        <button id="ResetTemplate" onClick={onResetTemplate}>Reset Template</button>
         <span style={{ margin: "0 1rem" }}>/</span>
-        <button onClick={() => generatePDF(designer.current)}>Generate PDF</button>
+        <button id="GeneratePDF" onClick={() => generatePDF(designer.current)}>Generate PDF</button>
       </header>
       <div ref={designerRef} style={{ width: '100%', height: `calc(100vh - ${headerHeight}px)` }} />
     </div>
