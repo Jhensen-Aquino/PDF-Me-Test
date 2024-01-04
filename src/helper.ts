@@ -82,21 +82,32 @@ export const downloadJsonFile = (json: any, title: string) => {
   }
 };
 
+// export const handleLoadTemplate = (
+//   e: React.ChangeEvent<HTMLInputElement>,
+//   currentRef: Designer | Form | Viewer | null
+// ) => {
+//   if (e.target && e.target.files) {
+//     getTemplateFromJsonFile(e.target.files[0])
+//       .then((t) => {
+//         if (!currentRef) return;
+//         currentRef.updateTemplate(t);
+//       })
+//       .catch((e) => {
+//         alert(`Invalid template file.
+// --------------------------
+// ${e}`);
+//       });
+//   }
+// };
+
 export const handleLoadTemplate = (
   e: React.ChangeEvent<HTMLInputElement>,
   currentRef: Designer | Form | Viewer | null
 ) => {
-  if (e.target && e.target.files) {
-    getTemplateFromJsonFile(e.target.files[0])
-      .then((t) => {
-        if (!currentRef) return;
-        currentRef.updateTemplate(t);
-      })
-      .catch((e) => {
-        alert(`Invalid template file.
---------------------------
-${e}`);
-      });
+  if (e.target && e.target.value) {
+    const json = JSON.parse(e.target.value);
+    if (!currentRef) return;
+    currentRef.updateTemplate(json);
   }
 };
 
