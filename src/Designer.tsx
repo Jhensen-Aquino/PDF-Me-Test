@@ -100,7 +100,7 @@ function App() {
         <label style={{ width: 180 }}>
           Load Template
 {/*           <input id="LoadTemplate" type="file" accept="application/json" onChange={(e) => handleLoadTemplate(e, designer.current)} /> */}
-          <input id="LoadTemplate" type="text" placeholder="Enter JSON data here" onChange={(e) => handleLoadTemplate(e.target, designer.current)} />
+          <input id="LoadTemplate" type="text" placeholder="Enter JSON data here" onChange={(e) => handleLoadTemplate(e.target.value, designer.current)} />
         </label>
         <span style={{ margin: "0 1rem" }}>/</span>
         <button id="DownloadTemplate" onClick={onDownloadTemplate}>Download Template</button>
