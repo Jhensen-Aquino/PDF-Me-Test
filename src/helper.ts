@@ -105,8 +105,8 @@ export const handleLoadTemplate = (
   currentRef: Designer | Form | Viewer | null
 ) => {
     if (!currentRef) return;\
-    let json = JSON.parse(json) ;
-    currentRef.updateTemplate(json);
+    let parsedJson = JSON.parse(json) ;
+    currentRef.updateTemplate(parsedJson);
 };
 
 export const getPlugins = () => {
