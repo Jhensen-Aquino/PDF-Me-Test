@@ -125,7 +125,8 @@ function App() {
         </div>
         <label style={{ width: 180 }}>
           Load Template
-          <input type="file" accept="application/json" onChange={(e) => handleLoadTemplate(e, ui.current)} />
+{/*           <input type="file" accept="application/json" onChange={(e) => handleLoadTemplate(e, ui.current)} /> */}
+          <input type="text" onChange={(e) => handleLoadTemplate(e.target.value, ui.current)} />
         </label>
         <span style={{ margin: "0 1rem" }}>/</span>
         <button onClick={onGetInputs}>Get Inputs</button>
