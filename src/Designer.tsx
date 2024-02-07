@@ -89,7 +89,8 @@ function App() {
 
   return (
     <div>
-      <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginRight: 120, }}>
+{/*       <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginRight: 120, }}> */}
+      <header style={{ display: "none", alignItems: "center", justifyContent: "space-between", marginRight: 120, }}>
         <strong>Designer</strong>
         <span style={{ margin: "0 1rem" }}>:</span>
         <label style={{ width: 180 }}>
